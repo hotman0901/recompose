@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { compose, withState, withHandlers, withProps } from 'recompose';
+import { compose, withState, withHandlers, withProps, lifecycle } from 'recompose';
 
 /**
  * Functional component 使用 recompose
@@ -8,7 +8,7 @@ import { compose, withState, withHandlers, withProps } from 'recompose';
  */
 // 另外寫法 先將要用到的東西塞入
 const TestComponent = ({
-    title, message, toggleVisibility, isVisible, isbenny, bennyBtn1, bennyBtn2
+    title, message, toggleVisibility, isVisible, isbenny, bennyBtn1, bennyBtn2, zoo
 }) =>
 {
     return (
@@ -17,7 +17,8 @@ const TestComponent = ({
             {
                 isVisible ? <p>Visible</p> : <p> Not Visible </p>
             }
-            <p>{message}</p>
+            <p>message::::::::</p>
+            <p style={{ color: 'red' }}>{message}-{zoo}</p>
             <button name="benny" onClick={toggleVisibility}> toggleVisibility! </button>
             <br />
             {
@@ -82,7 +83,14 @@ const Presentation = compose(
             title: isVisible ? 'This is the visible title' : 'This is the default title',
             message: isVisible ? 'Hello I am Visible' : 'I am not visible yet, click the button!',
         };
-    })
+    }),
+    lifecycle({
+        componentDidMount() {
+            setTimeout(() => {
+                this.setState({ message: 'update from componentDidMount', zoo: 'bird' });
+            }, 10);
+        },
+    }),
 )(TestComponent);
 
 export default Presentation;

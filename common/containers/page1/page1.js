@@ -43,7 +43,7 @@ class Page1 extends React.Component
 
                 <Recompose />
                 <hr />
-                <h1>origin: {this.state.count}</h1>
+                <h1>pureComponent: {this.state.count}</h1>
                 <button onClick={() => this.countUp()}>click</button>
             </Container>
         );
