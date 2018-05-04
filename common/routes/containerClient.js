@@ -4,3 +4,4 @@ export const Index = asyncComponent('Index', () => import('../containers/index/i
 export const Counter = asyncComponent('Counter', () => import('../containers/counter/counter'));
 export const NotFound = asyncComponent('NotFound', () => import('../containers/notFound/notFound'));
 export const Page1 = asyncComponent('Page1', () => import('../containers/page1/page1'));
+export const Page2 = asyncComponent('Page2', () => import('../containers/page2/page2'));

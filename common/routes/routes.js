@@ -1,4 +1,4 @@
-import { Index, Counter, NotFound, Page1 } from './containerServer';
+import { Index, Counter, NotFound, Page1, Page2 } from './containerServer';
 
 if (undefined === System.import)
 {
@@ -30,6 +30,11 @@ export const routes = [
     {
         component: Page1,
         path: '/page1',
+        exact: true
+    },
+    {
+        component: Page2,
+        path: '/page2',
         exact: true
     }
 ];
