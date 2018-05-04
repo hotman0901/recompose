@@ -4,7 +4,7 @@ import { translate } from 'react-i18next';
 import isNode from 'detect-node';
 import { Helmet } from 'react-helmet';
 import { Container } from '../../widgets/container';
-import { Button } from '../../widgets/button';
+import { Button, Button2 } from '../../widgets/button';
 
 @translate([], { wait: isNode ? false : true })
 class Index extends React.Component
@@ -31,6 +31,7 @@ class Index extends React.Component
                 </Helmet>
 
                 <Button>styled-components</Button>
+                <Button2 bgc="blue">style-components-btn</Button2>
             </Container>
         );
     }

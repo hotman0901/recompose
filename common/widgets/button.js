@@ -8,3 +8,18 @@ export const Button = styled.button`
     color: palevioletred;
     border: 2px solid palevioletred;
 `;
+
+
+export const Button2 = styled.button`
+    border-radius: 5px;
+    color: #fff;
+    background-color: ${(props) => {
+        if (!props.bgc) {
+            return 'red';
+        }
+        else
+        {
+            return props.bgc;
+        }
+    }};
+`;
