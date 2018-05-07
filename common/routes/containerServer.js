@@ -5,3 +5,4 @@ export const Counter = syncComponent('Counter', require('../containers/counter/c
 export const NotFound = syncComponent('NotFound', require('../containers/notFound/notFound'));
 export const Page1 = syncComponent('Page1', require('../containers/page1/page1'));
 export const Page2 = syncComponent('Page2', require('../containers/page2/page2'));
+export const Page3 = syncComponent('Page3', require('../containers/page3/page3'));
